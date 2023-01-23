@@ -5,6 +5,6 @@ class Index(View):
     def get(self, request, *args, **kwargs):
         return render(request,'landing/index.html')
 
-class login(View):
+class Login(View):
     def get(self, request, *args, **kwargs):
-        return render(request, 'login-page/login.html')
+        return render(request,'login-page/login.html')
