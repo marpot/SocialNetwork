@@ -40,7 +40,6 @@ AUTHENTICATION_BACKENDS = [
 
 
 INSTALLED_APPS = [
-    'SocialNetwork',
     'landing',
     
     'crispy_forms',
