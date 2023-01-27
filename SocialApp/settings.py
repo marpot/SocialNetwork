@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-mq)*e@+rkyg!9(x+f0@^!6=1!g03xe*gjj)3k&=7k&!3$%55pw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -41,7 +41,6 @@ AUTHENTICATION_BACKENDS = [
 
 INSTALLED_APPS = [
     'landing',
-    
     'crispy_forms',
     'allauth',
     'allauth.account',

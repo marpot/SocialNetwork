@@ -1,9 +1,13 @@
 from django.shortcuts import render
 from django.views import View
+from .models import Post
 
 class Index(View):
-    def get(self, request, *args, **kwargs):
-        return render(request,'landing/index.html')
+    def get(self, request):
+        return render(request, 'landing/index.html')
 
-#class Login(View):
- #   def getUsername(self, request)
+class PostListView(View):
+    def get(self, request):
+        posts = Post.objects.all().order_by('-creted_on')
+        context = {'post_list': posts}
+        return render(request, 'post-lists/post-list.html', context)
